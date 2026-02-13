@@ -366,3 +366,40 @@ font-weight:600;
 .leader-score{
 color:#16a34a;
 }
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px){
+
+.container{
+padding:15px;
+}
+
+.auth-box{
+flex-direction:column;
+}
+
+.auth-left, .auth-right{
+width:100%;
+}
+
+button{
+width:100%;
+margin-top:10px;
+}
+
+.quiz-box{
+padding:15px;
+}
+
+.options button{
+font-size:14px;
+padding:10px;
+}
+
+.leaderboard-item{
+flex-direction:column;
+gap:5px;
+align-items:flex-start;
+}
+
+}

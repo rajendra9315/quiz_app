@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elite Quiz Platform</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">EliteQuiz</div>
+<div class="nav-links">
+
+</div>
+</nav>
+
+<!-- AUTH -->
+<section class="auth-page" id="authSection">
+<div class="auth-left">
+<h1>Hello,<br><span>Welcome!</span></h1>
+<p>Challenge your brain with beautifully designed quizzes.</p>
+</div>
+
+<div class="auth-right">
+<h2>Login / Register</h2>
+<p class="auth-note">Register first if you are a new user.</p>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button class="green-btn" onclick="login()">Login</button>
+<button class="orange-btn" onclick="register()">Register</button>
+</div>
+</section>
+
+<!-- MAIN HOME -->
+<section class="home hidden" id="mainApp">
+
+<header class="home-header">
+<h2>Dashboard</h2>
+<button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<!-- START QUIZ -->
+<div class="hero-banner">
+<h1>Start a New Quiz</h1>
+<button class="orange-btn" onclick="openQuizSetup()">Start Quiz</button>
+</div>
+
+<!-- QUIZ SETUP BOX -->
+<div id="quizSetup" class="setup-box hidden">
+<h3>Select Category</h3>
+<select id="categorySelect"></select>
+
+<h3>Select Number of Questions</h3>
+<select id="questionCountSelect">
+<option value="5">5 Questions</option>
+<option value="10">10 Questions</option>
+<option value="15">15 Questions</option>
+<option value="20">20 Questions</option>
+</select>
+
+
+<button class="green-btn" onclick="startQuiz()">Start Now</button>
+</div>
+
+<!-- LEADERBOARD -->
+<div class="leaderboard">
+<h3>🏆 Leaderboard</h3>
+<div id="leaderboardList"></div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="categories">
+<h3>Categories</h3>
+<div class="category-grid" id="categoryGrid"></div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+<div class="stat-box">
+<h3 id="totalQuiz">0</h3>
+<p>Total Quizzes</p>
+</div>
+<div class="stat-box">
+<h3 id="avgScore">0%</h3>
+<p>Average Score</p>
+</div>
+</div>
+
+<!-- HISTORY -->
+<div class="history-section">
+<h3>Your History</h3>
+<div id="historyList"></div>
+</div>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quizSection" class="quiz-container hidden">
+<div class="quiz-card">
+<div class="quiz-top">
+<div class="timer">⏱ <span id="timeLeft">15</span>s</div>
+</div>
+<h2 id="questionTitle"></h2>
+<div id="options"></div>
+</div>
+</section>
+
+<!-- RESULT -->
+<section id="resultSection" class="result-container hidden">
+<div class="result-box">
+<h2 id="resultHeading"></h2>
+<p id="resultText"></p>
+<button class="orange-btn" onclick="goHome()">Back Home</button>
+</div>
+</section>
+
+<footer>
+<p>Made  by <b>Anshul Negi</b></p>
+<p>All rights are reserved </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
